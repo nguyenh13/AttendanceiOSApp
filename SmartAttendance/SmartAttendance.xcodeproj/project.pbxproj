@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E297E092178687500A2CFA0 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E297E082178687500A2CFA0 /* PersistenceService.swift */; };
+		0E297E0C2178736C00A2CFA0 /* Class+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E297E0A2178736C00A2CFA0 /* Class+CoreDataClass.swift */; };
+		0E297E0D2178736C00A2CFA0 /* Class+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E297E0B2178736C00A2CFA0 /* Class+CoreDataProperties.swift */; };
+		0E98333B2178451C00647C5D /* SmartAttendance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E9833392178451C00647C5D /* SmartAttendance.xcdatamodeld */; };
 		0EBCCFD821705ED8008A03B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCFD721705ED8008A03B7 /* AppDelegate.swift */; };
-		0EBCCFDA21705ED8008A03B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCFD921705ED8008A03B7 /* ViewController.swift */; };
 		0EBCCFDD21705ED8008A03B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCCFDB21705ED8008A03B7 /* Main.storyboard */; };
 		0EBCCFDF21705ED8008A03B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCCFDE21705ED8008A03B7 /* Assets.xcassets */; };
 		0EBCCFE221705ED8008A03B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCCFE021705ED8008A03B7 /* LaunchScreen.storyboard */; };
 		0EBCCFED21705ED8008A03B7 /* SmartAttendanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCCFEC21705ED8008A03B7 /* SmartAttendanceTests.swift */; };
+		0EBCCFFC21706222008A03B7 /* IMG_0506.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCCFFB21706222008A03B7 /* IMG_0506.png */; };
+		0EBCCFFE2170672F008A03B7 /* 95214.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCCFFD2170672F008A03B7 /* 95214.png */; };
+		0EBCD000217068AE008A03B7 /* checkmark-2-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCCFFF217068AD008A03B7 /* checkmark-2-512.png */; };
+		0EBCD00421706B9D008A03B7 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCD00321706B9D008A03B7 /* record.png */; };
+		0EBCD00C2170876A008A03B7 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCD00B2170876A008A03B7 /* ManageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E297E082178687500A2CFA0 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		0E297E0A2178736C00A2CFA0 /* Class+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0E297E0B2178736C00A2CFA0 /* Class+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0E98333A2178451C00647C5D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		0EBCCFD421705ED8008A03B7 /* SmartAttendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartAttendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBCCFD721705ED8008A03B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0EBCCFD921705ED8008A03B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EBCCFDC21705ED8008A03B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EBCCFDE21705ED8008A03B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EBCCFE121705ED8008A03B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +47,11 @@
 		0EBCCFE821705ED8008A03B7 /* SmartAttendanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartAttendanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBCCFEC21705ED8008A03B7 /* SmartAttendanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartAttendanceTests.swift; sourceTree = "<group>"; };
 		0EBCCFEE21705ED8008A03B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EBCCFFB21706222008A03B7 /* IMG_0506.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_0506.png; path = ../../../IMG_0506.png; sourceTree = "<group>"; };
+		0EBCCFFD2170672F008A03B7 /* 95214.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 95214.png; path = ../../../../Downloads/95214.png; sourceTree = "<group>"; };
+		0EBCCFFF217068AD008A03B7 /* checkmark-2-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkmark-2-512.png"; path = "../../../../Downloads/checkmark-2-512.png"; sourceTree = "<group>"; };
+		0EBCD00321706B9D008A03B7 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record.png; path = ../../../../Downloads/record.png; sourceTree = "<group>"; };
+		0EBCD00B2170876A008A03B7 /* ManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,10 @@
 		0EBCCFCB21705ED8008A03B7 = {
 			isa = PBXGroup;
 			children = (
+				0EBCCFFB21706222008A03B7 /* IMG_0506.png */,
+				0EBCCFFD2170672F008A03B7 /* 95214.png */,
+				0EBCCFFF217068AD008A03B7 /* checkmark-2-512.png */,
+				0EBCD00321706B9D008A03B7 /* record.png */,
 				0EBCCFD621705ED8008A03B7 /* SmartAttendance */,
 				0EBCCFEB21705ED8008A03B7 /* SmartAttendanceTests */,
 				0EBCCFD521705ED8008A03B7 /* Products */,
@@ -77,11 +97,15 @@
 		0EBCCFD621705ED8008A03B7 /* SmartAttendance */ = {
 			isa = PBXGroup;
 			children = (
+				0E297E0A2178736C00A2CFA0 /* Class+CoreDataClass.swift */,
+				0E297E0B2178736C00A2CFA0 /* Class+CoreDataProperties.swift */,
 				0EBCCFD721705ED8008A03B7 /* AppDelegate.swift */,
-				0EBCCFD921705ED8008A03B7 /* ViewController.swift */,
+				0E297E082178687500A2CFA0 /* PersistenceService.swift */,
+				0EBCD00B2170876A008A03B7 /* ManageViewController.swift */,
+				0E9833392178451C00647C5D /* SmartAttendance.xcdatamodeld */,
 				0EBCCFDB21705ED8008A03B7 /* Main.storyboard */,
-				0EBCCFDE21705ED8008A03B7 /* Assets.xcassets */,
 				0EBCCFE021705ED8008A03B7 /* LaunchScreen.storyboard */,
+				0EBCCFDE21705ED8008A03B7 /* Assets.xcassets */,
 				0EBCCFE321705ED8008A03B7 /* Info.plist */,
 			);
 			path = SmartAttendance;
@@ -178,6 +202,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EBCCFE221705ED8008A03B7 /* LaunchScreen.storyboard in Resources */,
+				0EBCCFFC21706222008A03B7 /* IMG_0506.png in Resources */,
+				0EBCD00421706B9D008A03B7 /* record.png in Resources */,
+				0EBCCFFE2170672F008A03B7 /* 95214.png in Resources */,
+				0EBCD000217068AE008A03B7 /* checkmark-2-512.png in Resources */,
 				0EBCCFDF21705ED8008A03B7 /* Assets.xcassets in Resources */,
 				0EBCCFDD21705ED8008A03B7 /* Main.storyboard in Resources */,
 			);
@@ -197,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EBCCFDA21705ED8008A03B7 /* ViewController.swift in Sources */,
 				0EBCCFD821705ED8008A03B7 /* AppDelegate.swift in Sources */,
+				0E297E092178687500A2CFA0 /* PersistenceService.swift in Sources */,
+				0EBCD00C2170876A008A03B7 /* ManageViewController.swift in Sources */,
+				0E297E0C2178736C00A2CFA0 /* Class+CoreDataClass.swift in Sources */,
+				0E297E0D2178736C00A2CFA0 /* Class+CoreDataProperties.swift in Sources */,
+				0E98333B2178451C00647C5D /* SmartAttendance.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +497,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0E9833392178451C00647C5D /* SmartAttendance.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0E98333A2178451C00647C5D /* Model.xcdatamodel */,
+			);
+			currentVersion = 0E98333A2178451C00647C5D /* Model.xcdatamodel */;
+			path = SmartAttendance.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0EBCCFCC21705ED8008A03B7 /* Project object */;
 }
