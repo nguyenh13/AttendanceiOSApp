@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ManageViewController : UIViewController, UITableViewDataSource{
+class ManageViewController : UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,9 +18,9 @@ class ManageViewController : UIViewController, UITableViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if classList.count == 0 {
-        createAlert(title: "Add class", message: "Click plus button to add class")
-        }
+//        if classList.count == 0 {
+//        createAlert(title: "Add class", message: "Click plus button to add class")
+//        }
         tableView.dataSource = self
         
         let fetchRequest: NSFetchRequest<Class> = Class.fetchRequest()
@@ -75,9 +75,9 @@ class ManageViewController : UIViewController, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else {return}
+        let subject = classList[indexPath.row]
         classList.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
-        let subject = classList[indexPath.row]
         PersistenceService.context.delete(subject)
         PersistenceService.saveContext()
         
@@ -90,7 +90,14 @@ class ManageViewController : UIViewController, UITableViewDataSource{
         print("Delete \(subject)")
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Cell is tapped") //Test if cell is tapped
+        self.performSegue(withIdentifier: "studentInfoView", sender: self)
+    }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let info = segue.destination as! StudentListViewController
+//    }
     
     override func viewDidAppear(_ animated: Bool) {
     }

@@ -21,6 +21,7 @@
 		0EBCD000217068AE008A03B7 /* checkmark-2-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCCFFF217068AD008A03B7 /* checkmark-2-512.png */; };
 		0EBCD00421706B9D008A03B7 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EBCD00321706B9D008A03B7 /* record.png */; };
 		0EBCD00C2170876A008A03B7 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBCD00B2170876A008A03B7 /* ManageViewController.swift */; };
+		0EFB618321898745005F01EB /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB618221898745005F01EB /* StudentListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		0EBCCFFF217068AD008A03B7 /* checkmark-2-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "checkmark-2-512.png"; path = "../../../../Downloads/checkmark-2-512.png"; sourceTree = "<group>"; };
 		0EBCD00321706B9D008A03B7 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = record.png; path = ../../../../Downloads/record.png; sourceTree = "<group>"; };
 		0EBCD00B2170876A008A03B7 /* ManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
+		0EFB618221898745005F01EB /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				0EBCCFD721705ED8008A03B7 /* AppDelegate.swift */,
 				0E297E082178687500A2CFA0 /* PersistenceService.swift */,
 				0EBCD00B2170876A008A03B7 /* ManageViewController.swift */,
+				0EFB618221898745005F01EB /* StudentListViewController.swift */,
 				0E9833392178451C00647C5D /* SmartAttendance.xcdatamodeld */,
 				0EBCCFDB21705ED8008A03B7 /* Main.storyboard */,
 				0EBCCFE021705ED8008A03B7 /* LaunchScreen.storyboard */,
@@ -228,6 +231,7 @@
 				0EBCCFD821705ED8008A03B7 /* AppDelegate.swift in Sources */,
 				0E297E092178687500A2CFA0 /* PersistenceService.swift in Sources */,
 				0EBCD00C2170876A008A03B7 /* ManageViewController.swift in Sources */,
+				0EFB618321898745005F01EB /* StudentListViewController.swift in Sources */,
 				0E297E0C2178736C00A2CFA0 /* Class+CoreDataClass.swift in Sources */,
 				0E297E0D2178736C00A2CFA0 /* Class+CoreDataProperties.swift in Sources */,
 				0E98333B2178451C00647C5D /* SmartAttendance.xcdatamodeld in Sources */,
