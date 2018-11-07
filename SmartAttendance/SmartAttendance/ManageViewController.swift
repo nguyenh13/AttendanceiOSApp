@@ -21,6 +21,7 @@ class ManageViewController : UIViewController, UITableViewDataSource, UITableVie
 //        if classList.count == 0 {
 //        createAlert(title: "Add class", message: "Click plus button to add class")
 //        }
+        self.navigationItem.title = "Manage Classes"
         tableView.dataSource = self
         
         let fetchRequest: NSFetchRequest<Class> = Class.fetchRequest()
@@ -40,6 +41,7 @@ class ManageViewController : UIViewController, UITableViewDataSource, UITableVie
         alert.addTextField { (classListTF) in
             classListTF.placeholder = "Enter Class"
         }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         let action = UIAlertAction(title: "Add", style: .default) { (_) in
             guard let list = alert.textFields?.first?.text else { return }
             print(list)
@@ -91,7 +93,12 @@ class ManageViewController : UIViewController, UITableViewDataSource, UITableVie
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Cell is tapped") //Test if cell is tapped
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        // Unwrap that optional
+        if let label = cell?.textLabel?.text {
+            print("Tapped \(label)")
+        }
         self.performSegue(withIdentifier: "studentInfoView", sender: self)
     }
     
