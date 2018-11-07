@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="751" y="174"/>
+            <point key="canvasLocation" x="1692" y="173.64532019704436"/>
         </scene>
         <!--Take Attendance-->
         <scene sceneID="QcR-oy-KW0">
@@ -39,9 +39,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIu-Xx-34A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="174"/>
+            <point key="canvasLocation" x="986.39999999999998" y="173.64532019704436"/>
         </scene>
-        <!--Student List View Controller-->
+        <!--Students-->
         <scene sceneID="jLf-Og-IiA">
             <objects>
                 <viewController id="xrl-lh-NC6" customClass="StudentListViewController" customModule="SmartAttendance" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,36 +53,45 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" id="iYg-JC-YMT">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iYg-JC-YMT" id="IwL-HG-QUd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xrl-lh-NC6" id="hbH-e1-aVo"/>
+                                    <outlet property="delegate" destination="xrl-lh-NC6" id="uZg-rx-8NJ"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yvY-jR-pJH">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Students" id="o4P-9h-koK">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="fAc-pL-vne">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="70q-Oc-kzE">
-                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Back"/>
-                                            </button>
-                                            <connections>
-                                                <segue destination="Pec-Ps-0zq" kind="show" id="kUe-ui-9G3"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kyo-W6-1Pc"/>
-                                    </navigationItem>
-                                </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NXr-kb-pRV"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Students" id="AFj-oG-lnu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BYP-sT-1v7">
+                            <connections>
+                                <action selector="addStudentTapped:" destination="xrl-lh-NC6" id="41g-Ms-TT2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Iyh-5K-JRa" id="5cl-WJ-mLr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMa-el-e04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-780" y="983"/>
         </scene>
-        <!--Manage Classes-->
+        <!--Manage View Controller-->
         <scene sceneID="tC4-L9-J7L">
             <objects>
                 <viewController id="Pec-Ps-0zq" customClass="ManageViewController" customModule="SmartAttendance" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +135,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mjx-Pp-cbu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="Manage Classes" image="95214.png" id="lxQ-bn-Slk"/>
+                    <navigationItem key="navigationItem" id="aVO-aG-1yd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0sc-lc-M3S">
+                            <connections>
+                                <action selector="onAddTapped:" destination="Pec-Ps-0zq" id="CAn-mL-ubo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="TZb-d4-Dlw" id="1KT-56-Cg2"/>
                         <segue destination="xrl-lh-NC6" kind="show" identifier="studentInfoView" id="u9N-8Y-a02"/>
@@ -134,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0te-EM-d1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-780" y="173.64532019704436"/>
+            <point key="canvasLocation" x="162.40000000000001" y="173.64532019704436"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JAH-m0-zmH">
@@ -146,7 +161,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Pec-Ps-0zq" kind="relationship" relationship="viewControllers" id="pEC-Nx-f16"/>
+                        <segue destination="5fR-Jn-m2K" kind="relationship" relationship="viewControllers" id="pEC-Nx-f16"/>
                         <segue destination="kCA-NL-N7L" kind="relationship" relationship="viewControllers" id="MuA-S1-KGd"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2V1-uD-3FK"/>
                     </connections>
@@ -191,13 +206,29 @@
             </objects>
             <point key="canvasLocation" x="-1135" y="-587"/>
         </scene>
+        <!--Manage Classes-->
+        <scene sceneID="W16-hT-KkO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5fR-Jn-m2K" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="Manage Classes" image="95214.png" id="lxQ-bn-Slk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yKf-YB-FvM">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pec-Ps-0zq" kind="relationship" relationship="rootViewController" id="qhw-CB-ba4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EF6-1n-bYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-780" y="173.64532019704436"/>
+        </scene>
     </scenes>
     <resources>
         <image name="95214.png" width="25" height="25"/>
         <image name="checkmark-2-512.png" width="25" height="25"/>
         <image name="record.png" width="24" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="kUe-ui-9G3"/>
-    </inferredMetricsTieBreakers>
 </document>
