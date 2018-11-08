@@ -18,9 +18,7 @@ class ManageViewController : UIViewController, UITableViewDataSource, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if classList.count == 0 {
-//        createAlert(title: "Add class", message: "Click plus button to add class")
-//        }
+
         self.navigationItem.title = "Manage Classes"
         tableView.dataSource = self
         
@@ -45,7 +43,6 @@ class ManageViewController : UIViewController, UITableViewDataSource, UITableVie
         let action = UIAlertAction(title: "Add", style: .default) { (_) in
             guard let list = alert.textFields?.first?.text else { return }
             print(list)
-//            self.add(list)
             let subject = Class(context: PersistenceService.context)
             subject.class_name = list
             PersistenceService.saveContext()
@@ -60,13 +57,11 @@ class ManageViewController : UIViewController, UITableViewDataSource, UITableVie
         return 1
     }
         
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return classList.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath)
         
         cell.textLabel?.text = classList[indexPath.row].class_name
@@ -101,21 +96,13 @@ class ManageViewController : UIViewController, UITableViewDataSource, UITableVie
         }
         self.performSegue(withIdentifier: "studentInfoView", sender: self)
     }
-    
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let info = segue.destination as! StudentListViewController
+//        if segue.identifier == "studentInfoView" {
+//            // Replace 'StudentInfoViewController' with your detail UIViewController class name.
+//            let destinationVC = segue.destination as? StudentListViewController
+//            destinationVC?.student = selectedStudent
+//        }
 //    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-    }
-    
-    //Alert function to add class
-    func createAlert (title:String, message:String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {(action) in alert.dismiss(animated: true, completion: nil)}))
-        
-        self.present(alert, animated: true,completion: nil)
-    }
-    
 }
 
