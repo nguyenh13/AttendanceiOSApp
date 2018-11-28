@@ -14,6 +14,7 @@ class ManageViewController : UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var tableView: UITableView!
     
     var classList = [Class]()
+    var selectedClass: StudentData?
   
     
     override func viewDidLoad() {
@@ -88,20 +89,24 @@ class ManageViewController : UIViewController, UITableViewDataSource, UITableVie
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
         
+//        if indexPath.row < classList.count {
+//            selectedClass = classList[indexPath.row]
+//        }
+        let cell = tableView.cellForRow(at: indexPath)
         // Unwrap that optional
         if let label = cell?.textLabel?.text {
             print("Tapped \(label)")
         }
+        
         self.performSegue(withIdentifier: "studentInfoView", sender: self)
     }
-
+    
+    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "studentInfoView" {
-//            // Replace 'StudentInfoViewController' with your detail UIViewController class name.
-//            let destinationVC = segue.destination as? StudentListViewController
-//            destinationVC?.student = selectedStudent
+//            let destinationVC = segue.destination as! StudentListViewController
+//            destinationVC.student = selectedClass
 //        }
 //    }
 }

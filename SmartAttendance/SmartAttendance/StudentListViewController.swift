@@ -14,7 +14,7 @@ class StudentListViewController: UIViewController, UITableViewDataSource,UITable
     @IBOutlet weak var tableView: UITableView!
     
     var studentList = [StudentData]()
-    var selectedStudent: StudentData?
+    var student: StudentData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,19 +64,6 @@ class StudentListViewController: UIViewController, UITableViewDataSource,UITable
         
         return stuCell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        // Make sure that the selected inexPath.row is within the bounds of the studentsList array.
-        if indexPath.row < studentList.count {
-            selectedStudent = studentList[indexPath.row]
-            performSegue(withIdentifier: "studentInfoView", sender: self)
-        }
-    }
-    
-    
-    
-    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else {return}

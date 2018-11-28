@@ -12,6 +12,7 @@
         <!--Attendance Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="AttendanceRecord" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="AttendanceRecord" customModule="SmartAttendance" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -19,27 +20,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Attendance Record" image="record.png" id="8te-tb-WRW"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Attendance Record" image="record" id="8te-tb-WRW"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="173.64532019704436"/>
-        </scene>
-        <!--Take Attendance-->
-        <scene sceneID="QcR-oy-KW0">
-            <objects>
-                <viewController id="kCA-NL-N7L" customClass="TakeAttendance" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OB9-hg-T32">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Xcl-Zf-JDU"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Take Attendance" image="checkmark-2-512.png" id="0vL-j1-P9S"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pIu-Xx-34A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="986.39999999999998" y="173.64532019704436"/>
+            <point key="canvasLocation" x="1022" y="-808"/>
         </scene>
         <!--Students-->
         <scene sceneID="jLf-Og-IiA">
@@ -89,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMa-el-e04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-780" y="983"/>
+            <point key="canvasLocation" x="2650" y="-113"/>
         </scene>
         <!--Manage View Controller-->
         <scene sceneID="tC4-L9-J7L">
@@ -149,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0te-EM-d1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.40000000000001" y="173.64532019704436"/>
+            <point key="canvasLocation" x="1858" y="-113"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JAH-m0-zmH">
@@ -162,7 +146,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="5fR-Jn-m2K" kind="relationship" relationship="viewControllers" id="pEC-Nx-f16"/>
-                        <segue destination="kCA-NL-N7L" kind="relationship" relationship="viewControllers" id="MuA-S1-KGd"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2V1-uD-3FK"/>
                     </connections>
                 </tabBarController>
@@ -210,7 +193,7 @@
         <scene sceneID="W16-hT-KkO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5fR-Jn-m2K" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="Manage Classes" image="95214.png" id="lxQ-bn-Slk"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Manage Classes" image="user group" id="lxQ-bn-Slk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yKf-YB-FvM">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -223,12 +206,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EF6-1n-bYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-780" y="173.64532019704436"/>
+            <point key="canvasLocation" x="1022" y="-113"/>
         </scene>
     </scenes>
     <resources>
-        <image name="95214.png" width="25" height="25"/>
-        <image name="checkmark-2-512.png" width="25" height="25"/>
-        <image name="record.png" width="24" height="25"/>
+        <image name="record" width="19.5" height="19.5"/>
+        <image name="user group" width="22.5" height="22.5"/>
     </resources>
 </document>
