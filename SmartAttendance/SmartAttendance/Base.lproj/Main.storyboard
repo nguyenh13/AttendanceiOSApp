@@ -17,13 +17,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="AttendanceRecord" customModule="SmartAttendance" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fa8-An-67z">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LAd-J9-V2m">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LAd-J9-V2m" id="maw-ss-gvF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Attendance Record" image="record" id="8te-tb-WRW"/>
+                    <navigationItem key="navigationItem" id="Fjg-Zo-6Vr"/>
+                    <connections>
+                        <segue destination="0JD-Ah-Fl9" kind="show" identifier="historySegue" id="4js-jd-Uhl"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1022" y="-808"/>
+            <point key="canvasLocation" x="1964" y="-808.37438423645324"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="r9h-YI-a5n">
+            <objects>
+                <viewController id="0JD-Ah-Fl9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JHk-D3-26g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kg0-Fi-Iuf">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OnK-Lb-gfa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="WL7-P2-IkV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNO-pg-Cub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2698.4000000000001" y="-806.1576354679803"/>
         </scene>
         <!--Students-->
         <scene sceneID="jLf-Og-IiA">
@@ -146,7 +189,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="5fR-Jn-m2K" kind="relationship" relationship="viewControllers" id="pEC-Nx-f16"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="2V1-uD-3FK"/>
+                        <segue destination="AwV-3K-PMK" kind="relationship" relationship="viewControllers" id="2V1-uD-3FK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xdj-Do-scp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,6 +250,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EF6-1n-bYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1022" y="-113"/>
+        </scene>
+        <!--Attendance Record-->
+        <scene sceneID="HRk-xh-thP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AwV-3K-PMK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Attendance Record" image="record" id="8te-tb-WRW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vDP-qy-9hr">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hel-cL-gos"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Qx-0i-S50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.6" y="-808.37438423645324"/>
         </scene>
     </scenes>
     <resources>

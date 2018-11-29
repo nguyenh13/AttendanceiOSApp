@@ -18,18 +18,19 @@ class StudentListViewController: UIViewController, UITableViewDataSource,UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        //fetch data in studentList in order show display data everytime the view is loaded.
         let fetchRequest: NSFetchRequest<StudentData> = StudentData.fetchRequest()
-        
         do {
             let studentList = try PersistenceService.context.fetch(fetchRequest)
             self.studentList = studentList
             self.tableView.reloadData()
         } catch {}
         
-        
     }
     
+    
+    //Add button to add student cell after choosing a single class
     @IBAction func addStudentTapped(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Add Student", message: nil, preferredStyle: .alert)
         alert.addTextField { (studentListTF) in
@@ -49,6 +50,7 @@ class StudentListViewController: UIViewController, UITableViewDataSource,UITable
         present(alert,animated: true)
     }
     
+    //Datasource Delegate
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -65,6 +67,7 @@ class StudentListViewController: UIViewController, UITableViewDataSource,UITable
         return stuCell
     }
     
+    //Editing function, allows to swipe cell to delete, swipe all the way left to delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else {return}
         let person = studentList[indexPath.row]
